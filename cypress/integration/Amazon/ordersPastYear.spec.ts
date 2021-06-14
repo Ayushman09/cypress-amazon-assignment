@@ -11,8 +11,8 @@ context('Landing Page Tests', () => {
 
         })
         it('Add items and verify quantity', () => {
+            //navigate to my orders
             robotHands.clickFunctionalDomElement('#nav-orders');
-            //robotHands.clickFunctionalDomElement('#nav-link-accountList-nav-line-1');
             robotEyes.checkTextResponse('.a-padding-extra-large > .a-spacing-small', 'Sign-In')
             robotHands.typeTextonId('ap_email',"ayushman.chakravarty@zemosolabs.com{enter}");
             robotHands.typeTextonId('ap_password','qwerty@12345{enter}');
@@ -23,6 +23,8 @@ context('Landing Page Tests', () => {
             //         var text = element.text();
             //         cy.get('#a-autoid-1-announce').select(text);
             //})
+
+            //choose past year (2021)
             robotHands.clickFunctionalDomElement('#a-autoid-1-announce');
             robotHands.clickFunctionalDomElement('#orderFilter_2');
 

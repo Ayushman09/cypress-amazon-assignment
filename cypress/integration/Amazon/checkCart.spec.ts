@@ -12,12 +12,15 @@ context('Landing Page Tests', () => {
         })
         it('Add items and verify quantity', () => {
             let addedValue
+            // get quantity while adding
             cy.get('#quantity').then((qty) => {
                 addedValue = qty.text()
             })
             robotHands.clickFunctionalDomElement('#add-to-cart-button');
             //cy.get('[type="image"]').click()
             robotHands.clickFunctionalDomElement('#nav-cart');
+
+            //compare it to the cart value
             robotEyes.seesTextWithId('a-autoid-0-announce > span.a-dropdown-prompt','1');
 
 

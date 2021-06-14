@@ -11,11 +11,13 @@ context('Landing Page Tests', ()=>{
         })
 
         it('Exception: Wrong email',()=>{
+            // entering a wrong mail
             robotHands.clickFunctionalDomElement('#nav-link-accountList-nav-line-1');
             robotHands.typeTextonId('ap_email',"ayushman@zemosolabs.com{enter}");
             robotEyes.checkTextResponse('.a-alert-heading','There was a problem');
         })
         it('Exception: Wrong Password',()=>{
+            //entering a wrong password
             robotHands.clickFunctionalDomElement('#nav-link-accountList-nav-line-1');
             robotEyes.checkTextResponse('.a-padding-extra-large > .a-spacing-small', 'Sign-In')
             robotHands.typeTextonId('ap_email',"ayushman.chakravarty@zemosolabs.com{enter}");
@@ -25,6 +27,8 @@ context('Landing Page Tests', ()=>{
         })
 
         it('Happy login',()=>{
+
+            //ideal login
             robotHands.clickFunctionalDomElement('#nav-link-accountList-nav-line-1');
             robotEyes.checkTextResponse('.a-padding-extra-large > .a-spacing-small', 'Sign-In')
             robotHands.typeTextonId('ap_email',"ayushman.chakravarty@zemosolabs.com{enter}");

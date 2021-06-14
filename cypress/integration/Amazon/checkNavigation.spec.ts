@@ -10,10 +10,9 @@ context('Landing Page Tests', ()=>{
             dependencies.visitAmazonSite('https://www.amazon.in');
         })
         it('Getting third from todays deals', ()=> {
+            //clicking on hamburger menu
 
             robotHands.clickFunctionalDomElement('.hm-icon');
-            //robotHands.clickFunctionalDomElement('.hmenu-visible > :nth-child(15) > .hmenu-item');
-            //robotHands.clickFunctionalDomElement('.hmenu-visible > :nth-child(3) > .hmenu-item');
             robotHands.clickFunctionalDomElement(':nth-child(15) > .hmenu-item > div');
             
             //robotHands.clickOnClasswithButtonTagandIndex('.hmenu-content',8)
